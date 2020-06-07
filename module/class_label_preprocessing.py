@@ -8,7 +8,7 @@ from sklearn.preprocessing import MultiLabelBinarizer
 class label_preprocess:
     def __init__(self, list_):
         self.mlb = MultiLabelBinarizer()
-        self.mlb.fit(categories)
+        self.mlb.fit(list_)
     
     def encode(self, list_):
         return( list( self.mlb.transform([ list_ ])[0] ) )
